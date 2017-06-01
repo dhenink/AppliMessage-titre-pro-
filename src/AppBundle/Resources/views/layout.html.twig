@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div id="wrapper">
+
+    <div>
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
+                <ul class="nav navbar-top-links navbar-right">
+                    {% block navbartopright %}
+                    {% endblock %}
+                </ul>
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            {% block subnavbar %}
+            {% endblock %}
+        </div>
+        <div class="wrapper wrapper-content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+

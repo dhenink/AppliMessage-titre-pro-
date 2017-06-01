@@ -1,0 +1,27 @@
+{% for message in messages %}
+    {% if loop.index is divisible by(2) %}
+        <div class="chat-message right">
+            <img class="message-avatar" alt="image" src="{{ asset('img/profil.jpg') }}">
+            <div class="message">
+                <span class="message-date pull-left"> {{ message.datePublication|date ('d/m/Y à H:i') }} </span>
+                <div class="message-author text-info"> {{ message.pseudo|capitalize }}</div>
+                <a class="suppr-message pull-left" data-value="{{ message.id }}">
+                    <i id="fa-times" class="fa fa-times text-danger" data-toggle="tooltip" title="Supprimer" aria-hidden="true"></i>
+                </a>
+                <div class="message-content">{{ message.corps }}</div>
+            </div>
+        </div>
+    {% else %}
+        <div class="chat-message left">
+            <img class="message-avatar" alt="image" src="{{ asset('img/profil.jpg') }}">
+            <div class="message">
+                <span class="message-date pull-right"> {{ message.datePublication|date ('d/m/Y à H:i') }} </span>
+                <div class="message-author text-info"> {{ message.pseudo|capitalize }}</div>
+                <a class="suppr-message pull-right" data-value="{{ message.id }}">
+                    <i id="fa-times" class="fa fa-times text-danger" data-toggle="tooltip" title="Supprimer" aria-hidden="true"></i>
+                </a>
+                <div class="message-content">{{ message.corps }}</div>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}

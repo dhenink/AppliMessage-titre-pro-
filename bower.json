@@ -1,0 +1,24 @@
+{
+  "name": "AppTask",
+  "authors": [
+    "kevin dhenin <dhenink@laposte.net>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "UNLICENSED",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery-ui": "jqueryui#^1.12.1"
+  }
+}

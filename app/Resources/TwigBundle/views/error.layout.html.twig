@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Messages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <style>
+
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #F3F3F4;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            -webkit-background-size: contain; /* pour anciens Chrome et Safari */
+            background-size: contain;
+            font-size: 4vmin;
+        }
+
+        body, .wrapper > h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            color: #2e2e2e;
+        }
+
+        .main {
+            height: 100%;
+            width: 100%;
+            display: table;
+        }
+
+        .wrapper {
+            display: table-cell;
+            height: 100%;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .wrapper > h1 {
+            font-size: 14vmin;
+            margin-top: -40vh;
+        }
+
+        .wrapper > p {
+            margin-top: 0;
+        }
+
+        .wrapper > p,
+        .wrapper > h1 {
+            margin-bottom: 0;
+        }
+
+        .product-box {
+            padding: 0;
+            border: 1px solid #e7eaec;
+        }
+
+        .ibox-content {
+            background-color: #ffffff;
+            color: inherit;
+            padding: 15px 20px 20px 20px;
+            border-color: #e7eaec;
+            border-image: none;
+            border-style: solid solid none;
+            border-width: 1px 0;
+        }
+
+        .product-box:hover {
+            border: 1px solid transparent;
+            -webkit-box-shadow: 0 3px 7px 0 #a8a8a8;
+            -moz-box-shadow: 0 3px 7px 0 #a8a8a8;
+            box-shadow: 0 3px 7px 0 #a8a8a8;
+        }
+
+        .home {
+            font-size: 20px;
+            color: #EC4758;
+            font-style: normal;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+        }
+
+        ​
+    </style>
+</head>
+<body>
+<div class = "main">
+    <div class = "wrapper">
+        <div class="ibox">
+            <div class="ibox-content product-box">
+                <h1>{% block erreur %}Erreur {{ status_code }}{% endblock %}</h1>
+                <p>{% block message %}La page demandée est introuvable.{% endblock %}</p>
+                <a class="home" href="{{ path('homepage') }}">Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
